@@ -1,5 +1,6 @@
 using System;
 using System.Globalization;
+using System.IO;
 using System.Text;
 
 namespace AlmDenik
@@ -19,19 +20,25 @@ namespace AlmDenik
 
             while (bezi)
             {
+                VymazKonzoli();
                 Vypis(denik);
 
                 if (zprava != "")
                 {
+                    Console.WriteLine();
                     Console.WriteLine(zprava);
                     zprava = "";
                 }
 
+                Console.WriteLine();
                 Console.Write("> ");
-                string prikaz = (Console.ReadLine() ?? "zavri").Trim().ToLowerInvariant();
+                string prikaz = (Console.ReadLine() ?? "zavri").Trim().Trim('\uFEFF').ToLowerInvariant();
 
                 switch (prikaz)
                 {
+                    case "":
+                        break;
+
                     case "predchozi":
                         if (!denik.Dny.Predchozi()) zprava = "Už jste na prvním dni.";
                         break;
@@ -75,7 +82,27 @@ namespace AlmDenik
             }
         }
 
-        // ---------- Výpis ----------
+        // ---------- Výpis a obrazovka ----------
+
+        private static void VymazKonzoli()
+        {
+            try
+            {
+                Console.Clear();
+            }
+            catch
+            {
+            }
+
+            // ANSI sekvence: smazání obrazovky i historie posunu (scrollback) a přesun kurzoru na začátek
+            try
+            {
+                Console.Write("\x1b[2J\x1b[3J\x1b[H");
+            }
+            catch
+            {
+            }
+        }
 
         private static void Vypis(Denik denik)
         {
