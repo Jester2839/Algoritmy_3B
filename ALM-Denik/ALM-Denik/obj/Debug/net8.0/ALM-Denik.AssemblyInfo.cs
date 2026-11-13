@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ALM-Denik")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f084ae252f6031a61d0e2cd1d97c27847f4bf5a2")]
 [assembly: System.Reflection.AssemblyProductAttribute("ALM-Denik")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ALM-Denik")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

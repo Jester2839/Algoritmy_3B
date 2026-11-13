@@ -1,0 +1,18 @@
+4
+DEN 10.11.2026 2
+ZAZNAM 2
+DOjít nakoupit
+Vyčistit si zuby
+ZAZNAM 1
+Jít spát
+DEN 13.11.2026 1
+ZAZNAM 1
+Dořešit projekt
+DEN 15.11.2026 1
+ZAZNAM 1
+Dorešit projekt
+DEN 24.12.2026 1
+ZAZNAM 3
+Stědrý den
+rozbalit dárky
+jít spát
